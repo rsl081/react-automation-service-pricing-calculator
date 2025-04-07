@@ -1,0 +1,261 @@
+/* Reset base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall dark background & font */
+body {
+  background-color: #0E1117; /* Dark background similar to Streamlit dark theme */
+  color: #FAFAFA;           /* White text for contrast */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container to center content */
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styling */
+.App-header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #0E1117;
+  margin-bottom: 1rem;
+}
+
+.App-header h1 {
+  font-size: 2rem;
+  color: #FAFAFA;
+  margin-bottom: 0.5rem;
+}
+
+.App-header p {
+  color: #CCCCCC;
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #444;
+  background: #1E1F26;
+  color: #FAFAFA;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.tabs button:hover {
+  background: #343540; 
+}
+
+.tabs button.active {
+  background: #EB144C; /* Red accent for active tab */
+  color: #FAFAFA;
+  border-color: #EB144C;
+}
+
+/* Basic layout for tab content */
+.basic-container,
+.advanced-container,
+.market-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inputs,
+.results {
+  flex: 1;
+}
+
+/* Headings in content */
+h2, h3 {
+  color: #FAFAFA;
+  margin-bottom: 0.5rem;
+}
+
+/* Form labels and text */
+label, p, span, strong {
+  color: #FAFAFA;
+}
+
+/* Pricing boxes (black background, white text) */
+.pricing-box {
+  background-color: #000000; 
+  color: #FAFAFA;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Additional highlight sections (e.g. Market Trends) */
+.highlight {
+  background-color: #000000;
+  color: #FAFAFA;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.highlight ul {
+  list-style: disc outside;
+  padding-left: 1.5rem; /* or whatever spacing you want */
+}
+
+.highlight li {
+  margin-bottom: 0.5rem; /* add a bit of spacing between bullets */
+}
+
+/* Metrics area (Hourly Rate, Project Total, etc.) */
+.metrics div {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+/* Tables for market data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #1E1F26;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+  color: #FAFAFA;
+}
+
+/* Form controls (select, input, etc.) */
+input,
+select {
+  background-color: #1E1F26;
+  color: #FAFAFA;
+  border: 1px solid #444;
+  padding: 0.4rem;
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-left: 0.5rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0.5rem 0;
+  accent-color: #EB144C; /* Chrome & Edge support for slider color */
+}
+
+/* Buttons */
+button {
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Download button in the footer */
+footer button {
+  background-color: #EB144C;
+  color: #FAFAFA;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+footer button:hover {
+  background-color: #F63366;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer hr {
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+}
+
+footer p {
+  color: #999;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+/* ============================= */
+/* Market Insights Dashboard CSS */
+/* ============================= */
+
+/* Container for Market Insights tab only */
+.market-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top row: table and chart side by side */
+.market-top-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Table wrapper: controls table width */
+.market-top-row .table-wrapper {
+  flex: 1;
+}
+
+/* Chart wrapper: styles for the chart */
+.market-top-row .chart-wrapper {
+  flex: 1;
+  background-color: #1E1F26; /* Matches your theme */
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Ensure the chart heading has proper spacing */
+.market-top-row .chart-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Bottom row: two highlight boxes side by side */
+.market-bottom-row {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Highlight boxes in Market Insights */
+.market-bottom-row .highlight {
+  flex: 1;
+  background-color: #343540; /* Slightly lighter for differentiation */
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
