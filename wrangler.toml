@@ -1,0 +1,6 @@
+name = "react-automation-service-pricing-calculator"
+compatibility_date = "2025-04-07"
+workers_dev = true
+
+[site]
+bucket = "./dist"
