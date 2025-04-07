@@ -259,3 +259,38 @@ footer p {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
+
+
+
+/* For screens up to 768px wide (typical mobile/tablet breakpoint) */
+@media (max-width: 768px) {
+  /* Stack table + chart vertically */
+  .market-top-row {
+    flex-direction: column;
+  }
+
+  /* Give each part some margin so they don't overlap */
+  .table-wrapper,
+  .chart-wrapper {
+    margin-bottom: 1rem;
+    /* Key part: let the chart fill up the height */
+    position: relative; 
+    min-height: 400px; /* or 300px, pick what looks best */
+  }
+
+  /* Force the canvas to fill the container's width/height */
+  .chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Stack the two highlight boxes vertically */
+  .market-bottom-row {
+    flex-direction: column;
+  }
+}
+
+/* If your table is very wide, allow horizontal scroll on mobile */
+.table-wrapper {
+  overflow-x: auto; /* enables horizontal scrolling if needed */
+}

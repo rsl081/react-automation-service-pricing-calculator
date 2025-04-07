@@ -734,7 +734,7 @@ const App: React.FC = () => {
             averages and the information you provide. Actual rates may vary
             based on specific client needs, industry, and geographic location.
           </p>
-          <p>© 2025 YourCompanyName. All rights reserved.</p>
+          <p>© 2025 MM Digital. All rights reserved.</p>
         </div>
         <button onClick={downloadReport}>
           📄 Download Full Pricing Report (HTML)
